@@ -23,11 +23,11 @@ function createGrid() {
                 cell += "-1px 0 0 rgb(150, 150, 150);'>3</div>"
             }
             $("#container").append(cell);
-        };
-    };
+        }
+    }
     $(".grid").width(90);
     $(".grid").height(90);
-};
+}
 
 $( document ).ready(function() {
     createGrid()
