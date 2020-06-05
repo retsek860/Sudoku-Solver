@@ -18,9 +18,9 @@ function createGrid() {
                 cell += "1px 0 0 rgb(150, 150, 150), "
             }
             if (columns%3==0) {
-                cell += "-1px 0 0 #000;'></div>"
+                cell += "-1px 0 0 #000;'>4</div>"
             } else {
-                cell += "-1px 0 0 rgb(150, 150, 150);'></div>"
+                cell += "-1px 0 0 rgb(150, 150, 150);'>3</div>"
             }
             $("#container").append(cell);
         };
@@ -30,5 +30,5 @@ function createGrid() {
 };
 
 $( document ).ready(function() {
-    createGrid(9)
+    createGrid()
 });

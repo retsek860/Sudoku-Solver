@@ -17,6 +17,6 @@ body {
 .grid {
 	margin:0;
 	padding:0;
-	border:none;
-	display:inline-block;
+    border:none;
+    display:inline-table;
 }
