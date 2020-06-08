@@ -29,15 +29,44 @@ function createGrid() {
     $(".grid").height(90);
 }
 
+function clearGrid() {
+    $("#container").empty();
+    createGrid();
+};
+
 $( document ).ready(function() {
-    createGrid()
+
+    createGrid();
 
     $(".grid").hover(
         function () {
-            $(this).css("background", "lightgrey")
+            if ($(this).html() == "") {
+                $(this).css("background", "lightgrey");
+            }
         },
         function () {
-            $(this).css("background", "none")
+            if ($(this).html() == "") {
+                $(this).css("background", "none");
+            }
         }
     );
+
+    $(".grid").click(function() {
+        if ($(this).html() == "") {
+            var input = prompt("Input a number");
+            input = parseInt(input);
+            if ((0 < input) && (input < 10)) {
+                $(this).html(input);
+                $(this).css("fontSize", 70);
+                $(this).css("background", "lightgrey")
+            } else {
+                alert("Not a valid input!")
+            }
+            
+        } else {
+            $(this).html("");
+            $(this).css("fontSize", 0);
+        }
+    });
+
 });

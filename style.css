@@ -12,6 +12,8 @@ body {
 	width:810px;
 	padding: 0;
 	border: none;
+	display: flex; 
+	flex-flow: row wrap;
 }
 
 .grid {
