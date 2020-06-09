@@ -54,13 +54,14 @@ $( document ).ready(function() {
 
     $(".grid").click(function() {
         if ($(this).html() == "") {
+            var input = false
             var input = prompt("Input a number");
             input = parseInt(input);
             if ((0 < input) && (input < 10)) {
                 $(this).html(input);
                 $(this).css("fontSize", 70);
                 $(this).css("background", "lightgrey")
-            } else {
+            } else if (input == false) {
                 alert("Not a valid input!")
             }
             
