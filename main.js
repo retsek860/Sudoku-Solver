@@ -2,6 +2,7 @@ function createGrid() {
     for (var rows = 0; rows < 9; rows++) {
         for (var columns = 0; columns < 9; columns++) {
             cell = "<div class='grid' "
+            cell += ("data-row=" + String(rows) + " data-column=" + String(columns) + " ")
             if (rows%3==2) {
                 cell += "style='box-shadow: 0 1px 0 #000, "
             } else {
