@@ -7,10 +7,18 @@ function solveSudoku() {
     var column = 0;
     var goingForward = true;
     var working = true;
+    
+    // First check if it is a valid sudoku
+    for (var i = 0; i < 9; i++) {
+        for (var j = 0; j < 9; j++) {
+            if ((workingGrid[i][j] != 0) && (isValid(workingGrid, i, j, workingGrid[i][j]) == false)) {
+                working = false;
+                alert("This is not a valid sudoku")
+            }
+        }
+    }
 
     while (working) {
-
-        console.log(row, column, goingForward)
 
         if ((row < 0) || (column < 0)) {
             alert("Cannot solve this sudoku!");
@@ -31,7 +39,6 @@ function solveSudoku() {
         
         else if (workingGrid[row][column] == 9) {
             workingGrid[row][column] = 0;
-            goingForward = false; // Don't think this line is necessary, once code is complete consider taking this line out.
             temp = updateCoords(row, column, goingForward);
             row = temp[0];
             column = temp[1];
