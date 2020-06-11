@@ -30,11 +30,6 @@ function createGrid() {
     $(".grid").height(90);
 }
 
-function clearGrid() {
-    $("#container").empty();
-    createGrid();
-};
-
 $( document ).ready(function() {
 
     createGrid();
